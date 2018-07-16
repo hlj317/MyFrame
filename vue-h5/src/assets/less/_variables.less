@@ -1,0 +1,133 @@
+@g-base: 46.875rem;
+@base: 46.875rem;
+@b: 46.875rem;
+@g-font-family:PingFang-SC-Regular,HeitiJ-Light, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;//基础的字体
+
+//各种灰度色，根据无线交互设计规范定制
+
+// color
+@gray-base:                    #3D3D3D; //适用于主要说明文字
+@gray-light:                   #666666;
+@gray-lighter:                 #999999;
+
+@color-main:                   #FF4965;
+@color-global:                 #6633DD;
+@color-red:                    #FF4848;
+@color-white:                  #FFFFFF;
+@color-green:                  #32BC6f; //绿色，用于即将开抢、预告的场景
+@color-grey:                   #8f8f8f;
+@color-disabled:               #8f8f8f; //适用于二级说明文字
+
+
+@color-fill1:                  #FFF1F3; // 填充色1 特别淡的分红
+@color-fill2:                  #FFE4E7; // 填充色2 浅色粉红
+
+
+@color-divider :               rgba(0,0,0,.08); //#F1F1F1 适用于分割线
+
+// 老版颜色
+@g-base: 46.875rem;
+@g-font-base: 40rem;
+@g-color-main: #ff4965; //粉色，贝贝主色调
+@g-color-nextup: #2cb951; //绿色，用于即将开抢、预告的场景
+@g-color-oversea: #b781ff; //紫色，用于全球购二期
+@g-color-quaner: #e72c64; //粉色，微购主色调
+//各种灰度色，根据无线交互设计规范定制
+@g-color-grey1: #333; //适用于文字
+@g-color-grey2: #666; //适用于文字
+@g-color-grey3: #999; //适用于文字
+@g-color-grey4: #bebebe;
+@g-color-grey5: #cecece; //适用于导航下的分割线、按钮不可用等
+@g-color-grey6: #e4e4e4; //适用于分割线 
+@g-color-grey7: #eee;
+@g-color-grey8: #f2f2f2; //使用于背景
+@g-color-grey9: #f9f9f9; //适用于导航栏背景
+
+@g-font-family:PingFang-SC-Regular,HeitiJ-Light, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;//基础的字体
+
+//蒙层
+@color-mask:                   #2A323D;
+
+
+@border-color:                 rgba(0, 0, 0, 0.08);
+@border-color2:                 #E4E4E4;
+@border-color3:                 #999999;
+
+// background
+@background-block:             #FFF;
+@background-main:              #F2F4F6; //适用用于背景
+@background-input:             #EEE;
+
+@bg-beibei-light:              rgba(255,73,100,0.60);
+@bg-beibei:                    @color-main;
+@bg-main:                      @background-main;
+@bg-block:                     @background-block;
+@bg-input:                     @background-input;
+
+// font-size
+@font-size-title-lg:           32;
+@font-size-title:              30;
+@font-size-base:               28;
+@font-size-info:               26;
+@font-size-sub:                24;
+
+// border-radius
+@border-radius:                8px;
+@border-radius-lg:             16px;
+
+
+// z-index
+@zindex-dialog:                1001;
+@zindex-dialog2:               501;
+@zindex-bar:                   100;
+@zindex-mask:                  300;
+
+
+
+//===  组件的变量
+//== dialogs
+//
+//##
+
+//** 背景
+@dialog-layer-bg:              rgba(0, 0, 0, .4);
+
+//** popup层
+@dialog-popup-width:           540rem/@g-base;
+@dialog-popup-bg:              @background-block;
+@dialog-popup-border-color:    @border-color;
+@dialog-popup-border-radius:   26px;
+
+//** 文字－>bd
+//@dialog-bd-padding:            1.8rem;
+
+//** title
+@dialog-title-color:           @gray-base;
+@dialog-title-font-size:       @font-size-title-lg;
+
+//** text
+@dialog-text-font-size:        @font-size-base;
+
+//** input
+@dialog-input-bg:               @background-input;
+@dialog-input-height:           88/@g-base;
+@dialog-input-font-size:        @font-size-base;
+@dialog-input-border-radius:    88/@g-base;
+
+//** dialog
+@dialog-button-font-size:       @font-size-title-lg;
+@dialog-button-font-color:      @gray-base;
+@dialog-button-border-color:    @border-color;
+
+
+// 常用间隔尺寸 
+@px8: 8rem/@g-base;
+@px16: 16rem/@g-base;
+@px20: 20rem/@g-base;
+@px24: 24rem/@g-base;
+@px32: 32rem/@g-base;
+
+
+// 背景图
+
+@bei-bg: url(//h0.hucdn.com/open/201639/ed37893cc0d2680e_375x375.png); // 方型背景图

@@ -1,0 +1,91 @@
+/*
+    1px border problem
+    inspired by http://alloyteam.github.io/JMUI/css/jmui.css
+    added by Xaber
+ */
+.border-common() {
+    position: relative;
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        pointer-events: none;
+        z-index: 1;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        &:after {
+            right: -100%;
+            bottom: -100%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            z-index: 1;
+        }
+    }
+}
+.border(@px, @type, @color) {
+    .border-common();
+    &:after {
+        border: @px @type @color;
+    }
+}
+.border-top(@px, @type, @color) {
+    .border-common();
+    &:after {
+        border-top: @px @type @color;
+    }
+}
+.border-bottom(@px, @type, @color) {
+    .border-common();
+    &:after {
+        border-bottom: @px @type @color;
+    }
+}
+.border-left(@px, @type, @color) {
+    .border-common();
+    &:after {
+        border-left: @px @type @color;
+    }
+}
+.border-right(@px, @type, @color) {
+    .border-common();
+    &:after {
+        border-right: @px @type @color;
+    }
+}
+
+// inspired by https://github.com/frozenui/frozenui/blob/master/sass/base/mixin.scss
+.border-with-radius(@px, @type, @color, @radius) {
+    border: @px @type @color;
+    border-radius: @radius;
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+        position: relative;
+        border: 0;
+        &:after{
+            content:'';
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            border: @px @type @color;
+            -webkit-transform:scale(.5);
+            transform:scale(.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            padding: @px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: @radius * 2;
+            pointer-events: none;
+        }
+    }
+}

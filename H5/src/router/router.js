@@ -49,6 +49,7 @@ const download = r => require.ensure([], () => r(require('../page/download/downl
 
 //测试
 const test1 = r => require.ensure([], () => r(require('../page/test/test1')), 'test1')
+const bb = r => require.ensure([], () => r(require('../page/bb/bb')), 'bb')
 
 export default [{
     path: '/',
@@ -257,6 +258,11 @@ export default [{
         {
             path: '/test1',
             component: test1
+        },
+        //bb首页
+        {
+            path: '/bb',
+            component: bb
         },
     ]
 }]
